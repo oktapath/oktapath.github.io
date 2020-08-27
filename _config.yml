@@ -30,7 +30,7 @@ twitter_username: oktapath
 github_username:  oktapath
 
 # Build settings
-theme: slate
+theme: Minima
 plugins:
   - jekyll-feed
 
