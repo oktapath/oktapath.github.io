@@ -255,6 +255,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 207)
   jekyll-feed (~> 0.13)
+  jekyll-watch
   rdiscount
   tzinfo (~> 1.2)
   tzinfo-data
