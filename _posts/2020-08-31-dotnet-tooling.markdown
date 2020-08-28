@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  ".Net Tooling"
-date:   2020-08-28 16:30:57 +0000
+title:  ".Net|Azure Tooling"
+date:   2020-08-31 14:00:00 +0000
 categories: .net tooling dotnet
 ---
 
@@ -23,7 +23,7 @@ The main IDE we normally use is Visual Studio. There are 3 main distributions: [
 
 Optionally you can use the [Visual Studio preview](https://visualstudio.microsoft.com/vs/preview/) that in return for giving the Visual Studio product teams feedback, you get to use any edition for free.
 
-### Extensions
+### VS Extensions
 
 Here's a list of the main extensions we use daily:
 
@@ -38,5 +38,38 @@ Here's a list of the main extensions we use daily:
 
 Another IDE we use almost as often as Visual Studio side by side is [Visual Studio Code](https://code.visualstudio.com/download). Because it's the largest open source project in the world, it contains several extensions and features that make it a better IDE for certain coding tasks: Markdown, Azure ARM Templates, Terraform, etc. It's also of note that it's a free, open source, IDE.
 
-### Extensions
+### VS Code Extensions
 
+Here's our list of common extensions for VSCode:
+
+- __[GitLens](https://github.com/eamodio/vscode-gitlens.git)__ - powerfull codelens extension for git information
+- __[Markdown All in One](https://github.com/yzhang-gh/vscode-markdown)__ - a bundle of features that makes editing markdown a breeze
+- __[Docker](https://github.com/microsoft/vscode-docker)__ - facilitates building docker containers and integrates with docker desktop
+- __[PowerShell](https://github.com/PowerShell/vscode-powershell.git)__ - allows for developing PowerShell in VS Code
+- __[Azure Tools](https://github.com/microsoft/vscode-node-azure-pack)__ - bundle of other extensions for working on Azure with VS Code
+
+## Jetbrains Rider
+
+Another option, that can reduce costs significantly, especially if the team is already using R#, is using the [Rider IDE](https://www.jetbrains.com/rider/), that now comes bundled in the R# ultimate package.
+
+Like writing C# in VS Code, Rider will also come with a set of restrictions in some of the more exotic code | work that you can do.
+
+## __Git stack tools__
+
+We use mostly command line git tooling. The cost is a steeper learning curve, but there are good resources out there that can help you along this journey:
+
+- __[git - the simple guide](http://rogerdudler.github.io/git-guide/)__
+- __[Pro git book](http://rogerdudler.github.io/git-guide/)__
+
+We use our prefered shell of choice: PowerShell. To get the latest version of PowerShell, just hit the [releases tab on their github page](https://github.com/PowerShell/powershell/releases). Have the latest [git client for windows](https://git-scm.com/download/win) installed and you are almost ready to go.
+
+The latest step is to install a PowerShell module that integrates the git client very well with PowerShell, we use the [Posh-Git module](https://github.com/dahlbyk/posh-git) for this, you can install it by simply doing:
+
+```powershell
+Install-Module posh-git -Scope CurrentUser
+Add-PoshGitToProfile
+```
+
+This will integrate the git client different output channels nicely with PowerShell, otherwise PowerShell will see stdwarn for example as an error channel and the git client gives you hints through that output channel so things show up in red as if they were problems. It will also give you an aditional helper after the folder name that tracks your current branch state vs the remote origin:
+
+![Posh Git Shell](./images/dotnet-tooling-git.png)
