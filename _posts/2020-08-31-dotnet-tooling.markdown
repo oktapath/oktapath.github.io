@@ -80,7 +80,7 @@ Finally is a little helper script, for you to put into your PowerShell profile, 
 code $profile
 ```
 
-And dump this in so that you can simply type `pr` on a repo folder to automatically create a PR:
+And dump this in so that you can simply type `pr` on a repo folder that belongs to Azure DevOps (sorry, this won't work with github _yet_!) to automatically create a PR:
 
 ```powershell
 New-Alias -Name "pr" New-PullRequest
