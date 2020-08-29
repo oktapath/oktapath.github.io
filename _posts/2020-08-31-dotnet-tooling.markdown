@@ -73,3 +73,23 @@ Add-PoshGitToProfile
 This will integrate the git client different output channels nicely with PowerShell, otherwise PowerShell will see stdwarn for example as an error channel and the git client gives you hints through that output channel so things show up in red as if they were problems. It will also give you an aditional helper after the folder name that tracks your current branch state vs the remote origin:
 
 ![Posh Git Shell](./images/dotnet-tooling-git.png)
+
+Finally is a little helper script, for you to put into your PowerShell profile, to edit your profile just do:
+
+```powershell
+code $profile
+```
+
+And dump this in so that you can simply type `pr` on a repo folder to automatically create a PR:
+
+```powershell
+New-Alias -Name "pr" New-PullRequest
+
+function New-PullRequest
+{
+    $branch = git branch --show-current
+    $repo = git config --get remote.origin.url
+
+    start "$repo/pullrequestcreate?sourceRef=$branch&targetRef=master"
+}
+```
