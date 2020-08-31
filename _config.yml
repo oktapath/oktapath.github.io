@@ -18,6 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+
 title: Oktapath Blog Site
 email: contact@oktapath.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -28,7 +29,7 @@ twitter_username: oktapath
 github_username:  Oktapath
 
 # Build settings
-theme: minima
+theme: Minima
 plugins:
   - jekyll-feed
 port: 4044
