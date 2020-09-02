@@ -14,10 +14,20 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-        <li class="active"><a href="{{ "/" | relative_url }}" alt="home page">Home</a></li>   
-        <li class="active"><a href="{{ "/about/" | relative_url }}" alt="home page">About</a></li>         
+        <li><a href="{{ "/" | relative_url }}" alt="home page">Home</a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" alt="posts">Posts<span class="fa fa-angle-down"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          {% for post in site.posts %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul></li>
+        <li><a href="{{ "/tags/" | relative_url }}" alt="tags page">Tags</a></li>   
+        <li><a href="{{ "/about/" | relative_url }}" alt="home page">About</a></li>         
       </ul>                     
     </div><!--/.nav-collapse -->        
   </div>     
 </nav>
 </section>
+
