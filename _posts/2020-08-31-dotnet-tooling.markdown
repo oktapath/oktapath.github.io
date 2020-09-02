@@ -52,7 +52,7 @@ Here's our list of common extensions for VSCode:
 
 Another option, that can reduce costs significantly, especially if the team is already using R#, is using the [Rider IDE](https://www.jetbrains.com/rider/), that now comes bundled in the R# ultimate package.
 
-Like writing C# in VS Code, Rider will also come with a set of restrictions in some of the more exotic code | work that you can do.
+Like writing C# in VS Code, Rider will also come with a set of restrictions in some of the more exotic code/work that you can do.
 
 ## Git stack tools
 
