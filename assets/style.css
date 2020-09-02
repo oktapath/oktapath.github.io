@@ -65,6 +65,9 @@
 #mu-header .mu-header-area .mu-header-top-left .mu-top-email i {
     margin-right: 5px
 }
+#mu-header .mu-header-area .mu-header-top-left .mu-top-email a {
+    color: #333;
+}
 
 #mu-header .mu-header-area .mu-header-top-left .mu-top-phone {
     border-left: 1px solid #ddd;
@@ -77,6 +80,9 @@
 
 #mu-header .mu-header-area .mu-header-top-left .mu-top-phone i {
     margin-right: 5px
+}
+#mu-header .mu-header-area .mu-header-top-left .mu-top-phone a {
+    color: #333;
 }
 
 #mu-header .mu-header-area .mu-header-top-right {
@@ -102,7 +108,8 @@
     -moz-transition: all .5s;
     -ms-transition: all .5s;
     -o-transition: all .5s;
-    transition: all .5s
+    transition: all .5s;
+    color: #333
 }
 
 #mu-menu {
@@ -2450,7 +2457,8 @@
     }
     #mu-header .mu-header-area .mu-header-top-right .mu-top-social-nav li a {
         font-size: 12px;
-        padding: 0 5px
+        padding: 0 5px;
+        color: #333
     }
     #mu-slider .mu-slider-single .mu-slider-content h2 {
         font-size: 18px;

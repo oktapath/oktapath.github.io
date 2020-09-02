@@ -3,7 +3,15 @@ layout: post
 title:  "Open-source projects"
 date:   2020-08-02 14:00:00 +0000
 categories: code opensource open-source
+author: hughM
 ---
+{% assign author = site.data.people[page.author] %}
+<a rel="author"
+  href="https://github.com/{{ author.github }}"
+  title="{{ author.name }}"><span class="fa fa-github">
+    {{ author.name }}
+    </span>
+</a>
 
 __Why Open-source?__ What does open-source mean?
 
