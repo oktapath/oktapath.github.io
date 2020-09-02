@@ -3,7 +3,17 @@ layout: post
 title:  ".Net|Azure Tooling"
 date:   2020-08-31 14:00:00 +0000
 categories: .net tooling dotnet
+author: davidR
+tags: tooling developers
 ---
+{% assign author = site.data.people[page.author] %}
+<a rel="author"
+  href="https://github.com/{{ author.twitter }}"
+  title="{{ author.name }}">
+   <span class="fa fa-github">
+    {{ author.name }}
+    </span>
+</a>
 
 __Why is tooling important?__ This is one of the most common questions we get asked. Our answer is this:
 

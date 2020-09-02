@@ -18,22 +18,21 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Oktapath technical blog
-email: info@oktapath.com
+
+title: Oktapath Blog Site
+email: contact@oktapath.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  Get the latest updates from the highly experienced Oktapath team. This blog will cover a wide range of essential topics and news.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://oktapath-web.azurewebsites.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: oktapath
-github_username:  oktapath
+github_username:  Oktapath
 
 # Build settings
 theme: Minima
 plugins:
   - jekyll-feed
-
+port: 4000
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
