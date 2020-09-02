@@ -15,15 +15,15 @@ Consider a carpenter working with tools from a mechanic. His experience will be 
 
 We will cover a range of tools for working with .Net alongside with Azure and Azure DevOps.
 
-## __The Integrated Development Environment (IDE)__
+## The Integrated Development Environment (IDE)
 
-## Visual Studio
+### Visual Studio
 
 The main IDE we normally use is Visual Studio. There are 3 main distributions: [Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16), [Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&rel=16) and [Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=16). Community is a stripped down version, but Professional and Enterprise are close enough, the big difference being enterprise as the profilers, including Intellitrace, which can be very handy in certain debug scenarios.
 
 Optionally you can use the [Visual Studio preview](https://visualstudio.microsoft.com/vs/preview/) that in return for giving the Visual Studio product teams feedback, you get to use any edition for free.
 
-### VS Extensions
+#### VS Extensions
 
 Here's a list of the main extensions we use daily:
 
@@ -34,11 +34,11 @@ Here's a list of the main extensions we use daily:
 - __[Productivity Power Tools](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.PowerCommandsforVisualStudio)__ - another set of usefull addons
 - __[Wakatime](https://wakatime.com/visual-studio)__ - best time tracker for Visual Studio, allows you to keep track of your hands-on time and through what languages are you spending your time on
 
-## Visual Studio Code
+### Visual Studio Code
 
 Another IDE we use almost as often as Visual Studio side by side is [Visual Studio Code](https://code.visualstudio.com/download). Because it's the largest open source project in the world, it contains several extensions and features that make it a better IDE for certain coding tasks: Markdown, Azure ARM Templates, Terraform, etc. It's also of note that it's a free, open source, IDE.
 
-### VS Code Extensions
+#### VS Code Extensions
 
 Here's our list of common extensions for VSCode:
 
@@ -48,13 +48,13 @@ Here's our list of common extensions for VSCode:
 - __[PowerShell](https://github.com/PowerShell/vscode-powershell.git)__ - allows for developing PowerShell in VS Code
 - __[Azure Tools](https://github.com/microsoft/vscode-node-azure-pack)__ - bundle of other extensions for working on Azure with VS Code
 
-## Jetbrains Rider
+### Jetbrains Rider
 
 Another option, that can reduce costs significantly, especially if the team is already using R#, is using the [Rider IDE](https://www.jetbrains.com/rider/), that now comes bundled in the R# ultimate package.
 
 Like writing C# in VS Code, Rider will also come with a set of restrictions in some of the more exotic code | work that you can do.
 
-## __Git stack tools__
+## Git stack tools
 
 We use mostly command line git tooling. The cost is a steeper learning curve, but there are good resources out there that can help you along this journey:
 
@@ -72,7 +72,7 @@ Add-PoshGitToProfile
 
 This will integrate the git client different output channels nicely with PowerShell, otherwise PowerShell will see stdwarn for example as an error channel and the git client gives you hints through that output channel so things show up in red as if they were problems. It will also give you an aditional helper after the folder name that tracks your current branch state vs the remote origin:
 
-![Posh Git Shell](./images/dotnet-tooling-git.png)
+![Posh Git Shell](/assets/images/dotnet-tooling-git.png)
 
 Finally is a little helper script, for you to put into your PowerShell profile, to edit your profile just do:
 
