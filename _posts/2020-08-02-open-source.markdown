@@ -4,7 +4,7 @@ title:  "Open-source projects"
 date:   2020-08-02 14:00:00 +0000
 categories: code opensource open-source
 author: hughM
-tags: open-source github
+tags: open-source github developers
 ---
 {% assign author = site.data.people[page.author] %}
 <a rel="author"
