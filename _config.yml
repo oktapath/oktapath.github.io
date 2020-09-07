@@ -24,7 +24,7 @@ email: contact@oktapath.com
 description: >- # this means to ignore newlines until "baseurl:"
   Get the latest updates from the highly experienced Oktapath team. This blog will cover a wide range of essential topics and news.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://oktapath-web.azurewebsites.net" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.oktapath.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: oktapath
 github_username:  Oktapath
 
