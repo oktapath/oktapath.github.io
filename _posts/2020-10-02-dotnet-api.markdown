@@ -170,14 +170,22 @@ static async Task<int> SomeAsyncMethodInYourAPI(string url, HttpClient client, C
 A great habit to get into to early on, is to decorate your methods with comments at the very beginning. Even if you dont know what the API may look like, you do know what its trying to do. So comment it. This will make you APIs more consumable and your Swagger specs more readable and informative.
 
 ```csharp
-static async Task<int> SomeAsyncMethodInYourAPI(string url, HttpClient client, CancellationToken token)
-{
-    HttpResponseMessage response = await client.GetAsync(url, token);
-    byte[] content = await response.Content.ReadAsByteArrayAsync();
-    ...
-
-    return content.Length;
-}
+/// <summary>
+/// Gets the details for a specific object, as defined by their Id, which must also match their access_token
+/// </summary>
+/// <param name="id">The  identifier that will be used to retrieve for the object.</param>
+/// <param name="someOtherId">The other identifier for whom the object has been created.</param>
+/// <returns>An Object.</returns>
+/// <remarks>
+/// The API expects that a bearer token is passed in the header.
+///     #1 if no bearer token is available in the header a 401 response will be thrown
+///     #2 if the token has expired a 401/403 will be returned, this will be returned
+///     #3 the object response should include the items
+///     #4 the object response should return the additional details
+/// If the token is expired then the client should use its refresh token to get an update access token and try again, the API cannot complete this action
+/// </remarks>
+[HttpGet]
+public async Task<ActionResult<Object>> Get(string id, string someOtherId)
 ```
 
 ### Response Codes
