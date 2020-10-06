@@ -6,6 +6,7 @@ categories: .net api code
 author: hughM
 tags: tooling coding
 ---
+
 {% assign author = site.data.people[page.author] %}
 <a rel="author"
   href="https://github.com/{{ author.twitter }}"
@@ -40,11 +41,13 @@ OK, this is super important to do early on, before you create projects and start
 Sample Ignores
 
 User-specific files
+
 - `*.suo`
 - `*.user`
 - `*.sln.docstates`
 
 Build results
+
 - `[Dd]ebug/`
 - `[Rr]elease/`
 - `x64/`
@@ -67,7 +70,7 @@ So what's in a name. Apparently quite a bit actually. Getting your naming right 
 
 ***
 
-### c# Code
+### C# Code
 
 So the way you code and your syantx structre is a persional choice, but there are already definitions out there if you are not sure how you should go about it. A
 
@@ -129,8 +132,7 @@ So how does this help me really, I hear you ask! Well, why not run a scheduled b
 
 ### String Formatting
 
-The latest version of c# has some great new features. One that we will all use is string formatting. In the previos versions we did
-
+The latest version of C# has some great new features. One that we will all use is string formatting. In the previos versions we did
 
 ```csharp
 var param1 = "parameter";
@@ -150,11 +152,12 @@ Which is more readable do you think!
 
 ### Cancellation Token
 
-Anyone that uses `async` in their code will benefit from this tip. For all methods that may be long running (more than a hundred milliseconds), or that use resources such as database stores or a network resources, should have a cancellation token. Why? Simple if the thread gets cancelled or the socket is closed, the method chain will be notified and can so avoid doing any additional work that is not needed. For example. You have a method that writes data to three different databases, but during the operation after writing to the first datatbase, the socket gets closed. In normal circumstances the action will try and finish by completing the last two database operations. But if the action has been cancelled, we shoulnt, we should stop, or possibly even have compensating logic to reverse any work we have already done. This will leave your app in a more consistent state and will reduce the workoad. For an app that takes 100 requests a second, this may not make too much difference, but an app servicing 100,000 requests per second is a different story.
+Anyone that uses `async` in their code will benefit from this tip. For all methods that may be long running (more than a hundred milliseconds), or that use resources such as database stores or a network resources, should have a cancellation token. Why? Simple if the thread gets cancelled or the socket is closed, the method chain will be notified and can so avoid doing any additional work that is not needed. For example. You have a method that writes data to three different databases, but during the operation after writing to the first datatbase, the socket gets closed. In normal circumstances the action will try and finish by completing the last two database operations. But if the action has been cancelled, we shouldn't, we should stop, or possibly even have compensating logic to reverse any work we have already done. This will leave your app in a more consistent state and will reduce the workoad. For an app that takes 100 requests a second, this may not make too much difference, but an app servicing 100,000 requests per second is a different story.
 
 ```csharp
 static async Task<int> SomeAsyncMethodInYourAPI(string url, HttpClient client, CancellationToken token)
 {
+    // pass the cancellation token to .GetAsync
     HttpResponseMessage response = await client.GetAsync(url, token);
     byte[] content = await response.Content.ReadAsByteArrayAsync();
     ...
@@ -196,7 +199,7 @@ Understanding response codes is vital. Don be the guy who responss with a 200 OK
 
 ### Telemetry
 
-No matter what type of application you are building, you need telemnetry. Teelemrey is your code telling you what it is doing and what issues if any it encountered. Try and avoid physical log files, and look to stream your telemetry intot he clod somehwree. A great place to start is Application Insights or Splunk or alternative. Wiring thi up initially saves a huge amount of hassle later on, and can help to investiage your application while you build it. Try to woire this up in your middleware so its available all throughout your applciation.
+No matter what type of application you are building, you need telemnetry. Telemrey is your code telling you what it is doing and what issues if any it encountered. Try and avoid physical log files, and look to stream your telemetry into the cloud somewhere. A great place to start is Application Insights or Splunk or any alternative. Wiring this up initially saves a huge amount of hassle later on, and can help to investiage your application while you build it. Try to wire this up in your middleware so its available all throughout your applciation.
 
 Add a reference to your project, dont forget the * for the version
 
