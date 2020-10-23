@@ -18,11 +18,11 @@ tags: .NetCore API coding
 
 As a CEO, I am not expected to normally write code, however last week I had to build a POC, (Proof of concept) API for a .NET Core 3.1 project, and I was not sure where to start or what way to go about it, and what the norms in the industry are right now (they change quickly).
 
-__Why is a good structure important?__ So starting off, what type of directory structuctre should I have? Where do I put the code and where do the project and solution files go?
+__Why is a good structure important?__ So starting off, what type of directory structure should I have? Where do I put the code and where do the project and solution files go?
 
 > Luckily a call to our inhouse guru [David Rodrigues](https://github.com/djfr) and I had some of the answers I needed.
 
-The below is some of the practical things we dicussed and reviewed, and more importantly why! I hope I do them justice, and explain why they are actually quite important.
+The below is some of the practical things we discussed and reviewed, and more importantly why! I hope I do them justice, and explain why they are actually quite important.
 
 ***
 
@@ -30,7 +30,7 @@ The below is some of the practical things we dicussed and reviewed, and more imp
 
 ### Clone your repository first
 
-This seems like common sense, but I think it is easier to start with a source controlled directory at the very beginning. Dont create a project and then add it to your repository! Why? Well you will make decisions about the project initially that should be captured in source control and recorded. Cloning up front allows this. Just commit frequently and often, with good and concise commit messages. Commiting with a message of "work done" tells us nothing. However, commiting with the message "Folder structure defined" means much more and can help someone reviewing, to understand, how you came to your final decision and why.
+This seems like common sense, but I think it is easier to start with a source controlled directory at the very beginning. Don't create a project and then add it to your repository! Why? Well you will make decisions about the project initially that should be captured in source control and recorded. Cloning up front allows this. Just commit frequently and often, with good and concise commit messages. Committing with a message of "work done" tells us nothing. However, committing with the message "Folder structure defined" means much more and can help someone reviewing, to understand, how you came to your final decision and why.
 
 ***
 
@@ -68,7 +68,7 @@ So I acknowledge that this is a flavour, there is no right or wrong answer, but 
 
 ### Naming rules
 
-So what's in a name. Apparently quite a bit actually. Getting your naming right is important and can help your project in the long run. The standard I was following was the c# naming convention, which is Camel case, with "." seperators.
+So what's in a name. Apparently quite a bit actually. Getting your naming right is important and can help your project in the long run. The standard I was following was the c# naming convention, which is Camel case, with "." separators.
 This should cover both your directory and file names, as well as your namespace names. your namespace I followed was 
 `{AssemblyName}.{AreaofConcern}`
 
@@ -106,7 +106,7 @@ So instead of using package manager in Visual Studio or some other third party t
 </ItemGroup>
 ```
 
-Thats all you have to do, find the name of the package you need and just add it.
+That's all you have to do, find the name of the package you need and just add it.
 
 ***
 
@@ -128,9 +128,9 @@ Into a reference that always points to the latest version defined for that packa
 </ItemGroup>
 ```
 
-Notice the * insside the Version definition!
+Notice the * inside the Version definition!
 
-This means the package will be the latest version, evertime you build. *But* I hear you cry, what if we want to stick to a specific major version? Well just add in the following. 
+This means the package will be the latest version, every time you build. *But* I hear you cry, what if we want to stick to a specific major version? Well just add in the following. 
 ```xml
 <ItemGroup>
     <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.*" />
@@ -171,7 +171,7 @@ Anyone that uses `async` in their code will benefit from this tip. For all metho
 Why?
 Simple if the thread gets cancelled or the socket is closed, the method chain will be notified and can so avoid doing any additional work that is not needed.
 
-For example: You have a method that writes data to three different databases, but during the operation after writing to the first datatbase, the socket gets closed. In normal circumstances the action will try and finish by completing the last two database operations. But if the action has been cancelled, we shouldn't, we should stop, or possibly even have compensating logic to reverse any work we have already done. This will leave your app data in a more consistent state and will reduce the overall workoad. For an app that takes 100 requests a second, this may not make too much difference, but an app servicing 100,000 requests per second is a different story.
+For example: You have a method that writes data to three different databases, but during the operation after writing to the first database, the socket gets closed. In normal circumstances the action will try and finish by completing the last two database operations. But if the action has been cancelled, we shouldn't, we should stop, or possibly even have compensating logic to reverse any work we have already done. This will leave your app data in a more consistent state and will reduce the overall workload. For an app that takes 100 requests a second, this may not make too much difference, but an app servicing 100,000 requests per second is a different story.
 
 ```csharp
 static async Task<int> SomeAsyncMethodInYourAPI(string url, HttpClient client, CancellationToken token)
@@ -189,7 +189,7 @@ static async Task<int> SomeAsyncMethodInYourAPI(string url, HttpClient client, C
 
 ### Comments
 
-A great habit to get into to early on, is to decorate your methods with comments at the very beginning. Even if you dont know what the API may look like, you do know what its trying to do. So comment it. This will make you APIs more consumable and your Swagger specs more readable and informative.
+A great habit to get into to early on, is to decorate your methods with comments at the very beginning. Even if you don't know what the API may look like, you do know what its trying to do. So comment it. This will make you APIs more consumable and your Swagger specs more readable and informative.
 
 ```csharp
 /// <summary>
@@ -212,15 +212,15 @@ public async Task<ActionResult<Object>> Get(string id, string someOtherId)
 
 ### Response Codes
 
-Understanding response codes is vital. Dont be the guy who responds with a 200 OK and an error message in the payload.  
+Understanding response codes is vital. Don't be the guy who responds with a 200 OK and an error message in the payload.  
 
 - __[HTTP Response Codes](https://httpstatuses.com/)__ - knowing what codes are reflective of your calls is important and creates consistency. A good table to get information about the codes and their meaning is found here.
 
 ### Telemetry
 
-No matter what type of application you are building, you need telemetry. telemetry is your code telling you what it is doing and what issues, if any, it encountered. Try and avoid physical log files, and look to stream your telemetry into the cloud somewhere. A great place to start is Application Insights or Splunk or any alternative. Wiring this up initially saves a huge amount of hassle later on, and can help you to investiage your application while you build it. Try to wire this up in your middleware so its available all throughout your applciation.
+No matter what type of application you are building, you need telemetry. telemetry is your code telling you what it is doing and what issues, if any, it encountered. Try and avoid physical log files, and look to stream your telemetry into the cloud somewhere. A great place to start is Application Insights or Splunk or any alternative. Wiring this up initially saves a huge amount of hassle later on, and can help you to investigate your application while you build it. Try to wire this up in your middleware so its available all throughout your application.
 
-To use Appilcation Insights in your project add a reference to your project file, dont forget the * for the version
+To use Application Insights in your project add a reference to your project file, don't forget the * for the version
 
 ```xml
 <ItemGroup>
@@ -244,4 +244,4 @@ Then wire it up in your services.
 
 ## Conclusion
 
-So, while there was nothing super difficult outlined above it does help the long term matainence of your project if you follow these tips. The next thing I need to do is start writing some API's and testing them. But that is for a new blog on a different day.
+So, while there was nothing super difficult outlined above it does help the long term maintenance of your project if you follow these tips. The next thing I need to do is start writing some API's and testing them. But that is for a new blog on a different day.

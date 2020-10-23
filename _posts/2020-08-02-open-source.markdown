@@ -39,11 +39,11 @@ We hope to cover Infrastructure as Code (IaC), common security concerns and the 
 We hope to be able to generate multiple projects that cover many day to day scenarios such as:
 
 - Packages that deal with everyday issues in code.
-- Infrastructure as code to build your favorite platforms such as Kubernetes etc.
-- YAML that will build pipelines in Azure Devops.
+- Infrastructure as code to build your favourite platforms such as Kubernetes etc.
+- YAML that will build pipelines in Azure DevOps.
 - Packages to abstract security, while applying best practice.
 - Best Practice Angular templates to create UIs with the click of a button.
 
 ### Where will you find the code
 
-Simple you will see all our public code on our GitHub account. 
+Simple you will see all our public code on our GitHub account.

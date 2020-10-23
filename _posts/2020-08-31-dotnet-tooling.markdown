@@ -21,7 +21,7 @@ __Why is tooling important?__ This is one of the most common questions we get as
 
 Tooling helps to create a pattern of engagement and a mindset that can be very beneficial to a developer.
 
-Consider a carpenter working with tools from a mechanic. His experience will be poor, and his quality of work will suffer greatly. This is a scenario that replays itself in alsmost every technology business.
+Consider a carpenter working with tools from a mechanic. His experience will be poor, and his quality of work will suffer greatly. This is a scenario that replays itself in almost every technology business.
 
 We will cover a range of tools for working with .Net alongside with Azure and Azure DevOps.
 
@@ -29,7 +29,7 @@ We will cover a range of tools for working with .Net alongside with Azure and Az
 
 ### Visual Studio
 
-The main IDE we normally use is Visual Studio. There are 3 main distributions: [Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16), [Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&rel=16) and [Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=16). Community is a stripped down version, but Professional and Enterprise are close enough, the big difference being enterprise as the profilers, including Intellitrace, which can be very handy in certain debug scenarios.
+The main IDE we normally use is Visual Studio. There are 3 main distributions: [Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16), [Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Professional&rel=16) and [Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=16). Community is a stripped down version, but Professional and Enterprise are close enough, the big difference being enterprise as the profilers, including IntelliTrace, which can be very handy in certain debug scenarios.
 
 Optionally you can use the [Visual Studio preview](https://visualstudio.microsoft.com/vs/preview/) that in return for giving the Visual Studio product teams feedback, you get to use any edition for free.
 
@@ -40,8 +40,8 @@ Here's a list of the main extensions we use daily:
 - __[R#](https://www.jetbrains.com/resharper/)__ - we buy the ultimate version, because it comes bundled with a set of profilers that are great for your toolkit
 - __[The Essentials](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.BasicEssentials)__ - a collection of other extensions
 - __[PowerShell Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=AdamRDriscoll.PowerShellToolsforVisualStudio2017-18561)__ - essential if you're writing PowerShell modules
-- __[Power Commands for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.PowerCommandsforVisualStudio)__ - set of usefull commands
-- __[Productivity Power Tools](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.PowerCommandsforVisualStudio)__ - another set of usefull addons
+- __[Power Commands for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.PowerCommandsforVisualStudio)__ - set of useful commands
+- __[Productivity Power Tools](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.PowerCommandsforVisualStudio)__ - another set of useful addons
 - __[Wakatime](https://wakatime.com/visual-studio)__ - best time tracker for Visual Studio, allows you to keep track of your hands-on time and through what languages are you spending your time on
 
 ### Visual Studio Code
@@ -52,13 +52,13 @@ Another IDE we use almost as often as Visual Studio side by side is [Visual Stud
 
 Here's our list of common extensions for VSCode:
 
-- __[GitLens](https://github.com/eamodio/vscode-gitlens.git)__ - powerfull codelens extension for git information
+- __[GitLens](https://github.com/eamodio/vscode-gitlens.git)__ - powerful CodeLens extension for git information
 - __[Markdown All in One](https://github.com/yzhang-gh/vscode-markdown)__ - a bundle of features that makes editing markdown a breeze
 - __[Docker](https://github.com/microsoft/vscode-docker)__ - facilitates building docker containers and integrates with docker desktop
 - __[PowerShell](https://github.com/PowerShell/vscode-powershell.git)__ - allows for developing PowerShell in VS Code
 - __[Azure Tools](https://github.com/microsoft/vscode-node-azure-pack)__ - bundle of other extensions for working on Azure with VS Code
 
-### Jetbrains Rider
+### JetBrains Rider
 
 Another option, that can reduce costs significantly, especially if the team is already using R#, is using the [Rider IDE](https://www.jetbrains.com/rider/), that now comes bundled in the R# ultimate package.
 
@@ -71,7 +71,7 @@ We use mostly command line git tooling. The cost is a steeper learning curve, bu
 - __[git - the simple guide](http://rogerdudler.github.io/git-guide/)__
 - __[Pro git book](http://rogerdudler.github.io/git-guide/)__
 
-We use our prefered shell of choice: PowerShell. To get the latest version of PowerShell, just hit the [releases tab on their github page](https://github.com/PowerShell/powershell/releases). Have the latest [git client for windows](https://git-scm.com/download/win) installed and you are almost ready to go.
+We use our preferred shell of choice: PowerShell. To get the latest version of PowerShell, just hit the [releases tab on their GitHub page](https://github.com/PowerShell/powershell/releases). Have the latest [git client for windows](https://git-scm.com/download/win) installed and you are almost ready to go.
 
 The latest step is to install a PowerShell module that integrates the git client very well with PowerShell, we use the [Posh-Git module](https://github.com/dahlbyk/posh-git) for this, you can install it by simply doing:
 
@@ -80,7 +80,7 @@ Install-Module posh-git -Scope CurrentUser
 Add-PoshGitToProfile
 ```
 
-This will integrate the git client different output channels nicely with PowerShell, otherwise PowerShell will see stdwarn for example as an error channel and the git client gives you hints through that output channel so things show up in red as if they were problems. It will also give you an aditional helper after the folder name that tracks your current branch state vs the remote origin:
+This will integrate the git client different output channels nicely with PowerShell, otherwise PowerShell will see stdwarn for example as an error channel and the git client gives you hints through that output channel so things show up in red as if they were problems. It will also give you an additional helper after the folder name that tracks your current branch state vs the remote origin:
 
 ![Posh Git Shell](/assets/images/dotnet-tooling-git.png)
 
