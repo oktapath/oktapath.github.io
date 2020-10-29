@@ -82,7 +82,7 @@ Think of the car dashboard, some sensor information I may take note of but not a
 
 ___
 
-The best plans of course are automated, #"If I see this then do that automatically"# like triggering ABS when I slam on the brakes. An example, I might detect large volumes of data moving out of my network, coming from my database! Action, block traffic immediately. If its a false alarm, then tweak  my alert, if not, I may have saved my company.
+The best plans of course are automated, _"If I see this then do that automatically"_ like triggering ABS when I slam on the brakes. An example, I might detect large volumes of data moving out of my network, coming from my database! Action, block traffic immediately. If its a false alarm, then tweak  my alert, if not, I may have saved my company.
 
 > So the fourth principle of security is: you need to act on the information you are provided. Try and automate this as much as possible, but raise alerts and send texts etc to the support teams if you see unusual activity!
 
