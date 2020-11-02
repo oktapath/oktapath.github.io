@@ -116,16 +116,12 @@ In the car industry, are new employees allowed to start their first day, by desi
 
 |      |       |
 |---------|-----------|
-<<<<<<< HEAD
-| To drive a vehicle today in most countries you have to have insurance, and a driving license, and you car needs to pass a MOT or NCT. These usually prove that the vehicle is in good working order (through an NCT test or similar) and that I have shown competency in driving. We usually don't have an equivalent approach in our technology departments. We don't know how well our teams understand security. We have to take their word for it. | ![Crash Testing](/assets/images/securityblogs/ncap.jpg) |
- | The independent testing departments mandated by some countries don't believe the car companies when they tell them their car is "5 star" rated. They say, "prove it"! And so they crash a car into a wall and the measure the impact and the consequences of the collision. This allows them to determine how the crash could affect their passenger safety. In the software world, you can achieve the same things though OWASP:ASVS testing. | |
-=======
-| To drive a vehicle today in most countries you have to have insurance, and a driving license. These usually prove that the vehicle is in good working order (through an NCT test or similar) and that I have shown competency in driving. We usually don't have an equivalent approach in our technology departments. We don't know how well our teams understand security. We have to take their word for it. | ![Crash Testing](/assets/images/securityblogs/ncap.jpg)
+
+| To drive a vehicle today in most countries you have to have insurance, and a driving license, and you car needs to pass a MOT or NCT. These usually prove that the vehicle is in good working order (through an NCT test or similar) and that I have shown competency in driving. We usually don't have an equivalent approach in our technology departments. We don't know how well our teams understand security. We have to take their word for it. | ![Crash Testing](/assets/images/securityblogs/ncap.jpg)
 
 ___
 
-The testing departments of some countries don't believe the car companies when they tell them their car is "5 star" rated.They say, "prove it"! And so they crash a car into a wall and the measure the impact and the consequences of the collision. This allows them to determine how the crash could affect their passenger safety. In the software world, you can achieve the same things though blue/green testing.
->>>>>>> b8bf0d717075ade21b8aff727cd8aaf01c632678
+The independent testing departments mandated by some countries don't believe the car companies when they tell them their car is "5 star" rated. They say, "prove it"! And so they crash a car into a wall and the measure the impact and the consequences of the collision. This allows them to determine how the crash could affect their passenger safety. In the software world, you can achieve the same things though OWASP:ASVS testing.
 
 > So the sixth principle of security is: you need to try and break your systems to prove your concepts. Don't let a hacker prove it for you. Drive your code into the metaphoric test wall, and make sure everything is as expected. If not, give your teams time and space to correct it. If you get this right, you can sleep soundly, knowing your system are hard to breach, and if they do get breached you will know about it, and can limit or possibly even stop them before any damage is done.
 
