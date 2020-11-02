@@ -28,9 +28,9 @@ So, how do I explain some of the abstract concepts in simple English, language t
 
 ## Introduction
 
-Todays modern vehicles have many concepts built-in we take for granted, such as electronic keys, immobilisers, air bags, seat belts and other protection systems. Most consumers just assume that these systems are in the car,and would genuinely be shocked to find out they were not. The reality is, they would probably walk away from the dealership and look for an alternative car. Modern software consumers take the same attitude to their personal data, and the security of the software they are using. Loosing data would create massive reputational damage to a brand. Worse is if you loose their money or expose their payment details through negligence, you may be looking a the end of your business. As software matures and consumers along with it, the bar is being raised, if you are not moving with these changes you will be exposed, and creating massive risk for your business.
+Todays modern vehicles have many concepts built-in that we take for granted, such as electronic keys, immobilisers, air bags, seat belts and other protection systems. Most consumers just assume that these systems are in the car,and would genuinely be shocked to find out they were not. The reality is, they would probably walk away from the offending dealership and look for an alternative car. Modern software consumers take the same attitude to their personal data, and the security of the software they are using. Loosing data would create massive reputational damage to a brand. Worse is, if you loose their money or expose their payment details through negligence, you may be looking at the end of your business. As software matures and consumers along with it, the bar is being raised, if you are not moving with these changes you will be exposed, and as such creating massive risk for your business.
 
-> The overriding principle of security is, no one protection system on its own will secure your systems. Security is like an onion, where layers and layers of safety equipment will protect you. Think of cars, where there are airbags and seat belts. Combined these increase dramatically the likelihood that you can walk away from a crash, unharmed or with minimal injury. Its the combination of these systems, that offers the greatest protection.
+> The overriding principle of security is, no one protection system, on its own, will secure your systems. Security is like an onion, where layers and layers of safety equipment will protect you. Think of cars, where there are airbags and seat belts. Combined these increase dramatically the likelihood that you can walk away from a crash, unharmed or with minimal injury. Its the combination of these systems, that offers the greatest protection.
 
 ## Brief History lesson
 
@@ -42,13 +42,11 @@ Todays modern vehicles have many concepts built-in we take for granted, such as 
 
 |      |       |
 |---------|-----------|
-| Automobiles today have numerous safety systems, some are obvious like brakes, this would equate to a password/firewall in the security domain. Others, like tyre pressure sensors, are not so obvious, and might equate to key rotation policies in security terms. So starting off, when you look at an automobile can you tell what safety systems it has, and what safety options there are in the vehicle? The simple answer is no!  *Why is that?* Simply put, the decisions on safety were taken while they were designing the car. No manufacturer tries to bolt safety systems onto a finished car. Imagine airbags glued to the dashboard, or sensors poking out in all direction from the exterior and engine. It just wouldn't work, they would be too prone to failing or just not functioning, or worse, falling off unnoticed, until you really need them, only to find out they are no longer there. Would you drive your kids around in a car where the seatbelts were an afterthought?  | ![Safety Equipment](/assets/images/securityblogs/connectedcar.jpg)
-
-___
-
-Remember, car manufactures crash test their cars all the time to make sure their safety systems are working, and they look at the feedback and make changes, then test again, until they are happy.
+| Automobiles today have numerous safety systems, some are obvious like brakes. When you look at an automobile can you tell what safety systems it has, and what safety options there are in the vehicle? The simple answer is no!  *Why is that?* Simply put, the decisions on safety were taken while they were designing the car. No manufacturer tries to bolt safety systems onto a finished car. Imagine airbags glued to the dashboard, or sensors poking out in all direction from the exterior and engine. It just wouldn't work, they would be too prone to failing or just not functioning, or worse, falling off unnoticed, until you really need them, only to find out they are no longer there. Would you drive your kids around in a car where the seatbelts were an afterthought?  | ![Safety Equipment](/assets/images/securityblogs/connectedcar.jpg)
 
 > So the first principle of security is you need to plan and design it up front. You don't have to get it perfect! But it should never be an afterthought!
+
+Remember, car manufactures crash test their cars all the time to make sure their safety systems are working, and they look at the feedback and make changes, then test again, until they are happy.
 
 ## Equipment
 
@@ -70,7 +68,7 @@ In order to get a high ratings, you have to crash the car, only then can you pro
 
 ___
 
-Think of the car dashboard, some sensor information I may take note of but not action, such as violating the speed limit, others I will take more seriously, like the engine malfunction light. In software. one sensor blinking on its own may not mean much but several might point to an issue and will allow you to take action. Consider a feature such as lane assist in your car, when you hear the beeping sound (the car only beeps because it thinks the issue is important) your attention is drawn back to the road, and you can make a correction if needed. Software sensors should operate the same way. And remember we don't want them bolted on afterwards, they should be designed in up front.
+Think of the car dashboard, some sensors give me information I may take note of, but not action, such as violating the speed limit. Others, I will take more seriously, like the engine malfunction light. In software, one sensor blinking on its own may not mean much but several might point to an issue and will guide you to take action. Consider a feature such as lane assist in your car, when you hear the beeping sound (the car only beeps because it thinks the issue is important) your attention is drawn back to the road, and you can make a correction if needed. Software sensors should operate the same way. And remember we don't want them bolted on afterwards, they should be designed in up front.
 
 > The third principle of security is: you need to be able to see what your code is doing and why, sensors need to be sending the information somewhere so it can be reviewed and a determination made.
 
@@ -97,11 +95,11 @@ The best plans of course are automated, _"If I see this then do that automatical
 |      |       |
 |---------|-----------|
 | Imagine this scenario!
-You have hired a brand new junior engineer. He write 3 lines of code on his first Friday in the office and adds them to the system. Your build release process, sends that new code to production, and without realising it, you have created an exploitable weakness. __The Fix__  Your junior developer checks in some [source code](https://en.wikipedia.org/wiki/Source_Code), just 3 lines. After it has been built, we automatically run some tests to it, they all pass in this case. Then we deploy it to a staging location, and we test it more, all those tests pass. Then we deploy it to a testing environment, and we run a scan on the working code looking for vulnerabilities, we detect the mistake the developer made and we stop the deployment (halt the assembly line) then we notify the dev team of the issue, and we stop them from deploying again until the issue is fixed.| ![Car Assembly](/assets/images/securityblogs/carassembly.jpg)
+You have hired a brand new junior engineer. He writes three lines of code on his first Friday in the office and adds them to the system. Your build release process, sends that new code to production, and without realising it, you have created an exploitable weakness. __The Fix__  Your junior developer checks in some [source code](https://en.wikipedia.org/wiki/Source_Code), just three lines. After it has been built, we automatically run some tests to it, they all pass in this case. Then we deploy it to a staging location, and we test it more, in this scenario imagine all those tests pass. Then we deploy it to a testing environment, and we run a scan on the working code looking for vulnerabilities, we detect the mistake the developer made and we stop the deployment (halt the assembly line) then we notify the dev team of the issue, and we stop them from deploying again until the issue is fixed.| ![Car Assembly](/assets/images/securityblogs/carassembly.jpg)
 
 ___
 
-In the car industry, are new employees allowed to start their first day, by designing or contributing to a component for the car, and have that component immediately become available on the assembly line for production usage? The software industry is not as rigid as the automotive industry, but you can still see that checks and balances need to be in place if we are to foster the change culture that is vital for the software industry.
+In the car industry, are new employees allowed to start their first day, by designing or contributing to a component for the car, and have that component, within hours, become available on the assembly line for production usage? The software industry is not as rigid as the automotive industry, but you can still see that checks and balances need to be in place if we are to foster the change culture that is vital for the software industry.
 
 > So the fifth principle of security, and arguably the most critically important one is: you need to enshrine security in your processes, so that people can not circumvent it, either on purpose or by accident. You don't want a phone call late on a Saturday night, from your CISO, with business ending news.
 
@@ -109,15 +107,14 @@ In the car industry, are new employees allowed to start their first day, by desi
 
 |      |       |
 |---------|-----------|
-| When fixed we restart the whole process from the beginning. If on this deployment pass, there are now no issues, we will deploy it all the way to production. While all this is happening, we have run a scan on the source code inside its repository. Here we also detect the mistake the developer made, and we notify the testing team to ensure that this issue is more actively scanned for and blocked earlier in the process. As such our process is always getting better and more robust as we detect/fix and then remember the mistakes of the past. Imagine a new employee has just installed a steeling wheel in a car, and during our QA review we noticed it was wired up incorrectly. We stop the line and check all the employees other work to ensure his work is correct. We then remove the employee from the line and re-train him. When he has been re-trained, we send him back to the line to continue his job. |
+| When fixed we restart the whole process from the beginning. If on this deployment pass, there are no issues, we will deploy it all the way to production. While all this is happening, we have run a scan on the source code inside its repository. Here we also detect the mistake the developer made, and we notify the testing team to ensure that this issue is more actively scanned for and blocked earlier in the process. As such our process is always getting better and more robust as we detect/fix and then remember the mistakes of the past. Imagine a new employee has just installed a steeling wheel in a car, and during our QA review we noticed it was wired up incorrectly. We stop the line and check all that employees other work to ensure his work is correct. We then remove the employee from the line and re-train him. When he has been re-trained, we send him back to the line to continue his job. |
 | Do your software engineers take the same precautions when introducing a new service or software package? They probably don't, or don't even know that they should follow a process, so make one that they cant circumvent. In a proper delivery lifecycle, you can spot these problems before they ever get to the assembly line.| |
 
 ## Crash Testing
 
 |      |       |
 |---------|-----------|
-
-| To drive a vehicle today in most countries you have to have insurance, and a driving license, and you car needs to pass a MOT or NCT. These usually prove that the vehicle is in good working order (through an NCT test or similar) and that I have shown competency in driving. We usually don't have an equivalent approach in our technology departments. We don't know how well our teams understand security. We have to take their word for it. | ![Crash Testing](/assets/images/securityblogs/ncap.jpg)
+| To drive a vehicle today in most countries you have to have insurance, and a driving license, and you car needs to pass a MOT or NCT. These usually prove that the vehicle is in good working order (through an NCT test or similar) and that I have shown competency in driving and am covered in case I have an accident. We usually don't have an equivalent approach in our technology departments. We don't know how well our teams understand security. We have to take their word for it. | ![Crash Testing](/assets/images/securityblogs/ncap.jpg)
 
 ___
 
@@ -133,7 +130,7 @@ The independent testing departments mandated by some countries don't believe the
 
 ___
 
-So when the new junior developer sits at his desk on his first day, he knows to take security seriously and that he he is one of the pieces that holds the whole security picture together. He doesn't want to be the weak link, and so when or if he is not sure, instead of committing his  lines of code he may ask a peer, "does this look OK to you"!
+So when the new junior developer sits at his desk on his first day, he knows to take security seriously and that he he is one of the pieces that holds the whole security picture together. He doesn't want to be the weak link, and so when or if he is not sure, instead of committing his lines of code, he may ask a peer, "does this look OK to you"!
 
 > So the last principle of security is: it needs to be a culture. Its one of the first questions anyone in your organization askes when deciding on future or current work. If security is a culture, it becomes easy to manage, and security best practices more likely to be followed.
 
