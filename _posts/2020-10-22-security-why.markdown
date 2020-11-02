@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Security, why we need it, from a mile high view, non-technical audience"
+title:  "Security, why we need it, for a non-technical audience"
 date:   2020-10-01 14:00:00 +0000
 categories: security culture
 author: hughM
