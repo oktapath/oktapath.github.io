@@ -37,6 +37,7 @@ Todays modern vehicles have many concepts built-in that we take for granted, suc
 1949 – the first ever crash test dummy was created by Samuel W. Alderson, called Sierra Sam, which was used for aviation. Alderson then created a crash test dummy for motor vehicles in the early 50s. The 50s brought huge leaps in car safety technology with the introduction of several features still in use today, like the airbag and three-point seatbelt. __The 60s saw a boom in car safety rules which made seatbelts and head restraints, among a number of other features, mandatory in cars.__ More legislation was passed in the 70s and 80s, and electronics were now being introduced to car safety technology. The new millennium brings the first five-star safety rated car in Europe, plus new protection measures for pedestrians, as well as the continued development of computer technology.  ![Crash Test Dummy](/assets/images/securityblogs/dummy-original.jpg)
 
 ## Automobile Safety
+
 Automobiles today have numerous safety systems, some are obvious like brakes. When you look at an automobile can you tell what safety systems it has, and what safety options there are in the vehicle? The simple answer is no!  *Why is that?* Simply put, the decisions on safety were taken while they were designing the car. No manufacturer tries to bolt safety systems onto a finished car. Imagine airbags glued to the dashboard, or sensors poking out in all direction from the exterior and engine. It just wouldn't work, they would be too prone to failing or just not functioning, or worse, falling off unnoticed, until you really need them, only to find out they are no longer there. Would you drive your kids around in a car where the seatbelts were an afterthought? ![Safety Equipment](/assets/images/securityblogs/connectedcar.jpg)
 
 > So the first principle of security is you need to plan and design it up front. You don't have to get it perfect! But it should never be an afterthought!
@@ -44,6 +45,7 @@ Automobiles today have numerous safety systems, some are obvious like brakes. Wh
 Remember, car manufactures crash test their cars all the time to make sure their safety systems are working, and they look at the feedback and make changes, then test again, until they are happy.
 
 ## Equipment
+
 Safety equipment in a car is fundamental. You just expect it. Would you buy a cheap car that had no safety equipment! I know I wouldn't. Our software should be the same. Why allow your teams to build applications that have no safety or security built into them. There is noting wrong with asking your technology department to prove that the software they produce and the infrastructure they run on are secured. And here is the kicker, demand proof. If you are presented with a [threat assessment](https://en.wikipedia.org/wiki/Threat_assessment) on a piece of paper or in a document or even a completed [pen test](https://en.wikipedia.org/wiki/Penetration_test), you should be nervous. That's like asking for a safety rating such as NCAP or NHTSA, by only allowing the tester to walk around the vehicle and check the door handles and tap on the windows.  ![Seat Belt](/assets/images/securityblogs/seatbelt.jpg)
 
 ___
@@ -64,7 +66,7 @@ Think of the car dashboard, some sensors give me information I may take note of,
 
 ## The brains
 
-Every car nowadays has a computer that analyses the data it gets from the sensors around the vehicle and takes an action. On a snowy day, your car will detect that the driving surface is slippery and apply "all wheel drive" or "traction control". If you slam your foot on the brake hard, the car will apply ABS. We take this almost for granted. So why do we not take the same approach to our software? If I notice that one of my sensors is telling me something is wrong, I should take action, by blocking traffic, or alerting support teams. Having sensors and safety equipment is only useful if I monitor them and have actions plans to deal with them, when and if, they go off. ![Car Brains](/assets/images/securityblogs/brains.jpeg)
+Every car nowadays has a computer that analyses the data it gets from the sensors around the vehicle and takes an action. On a snowy day, your car will detect that the driving surface is slippery and apply "all wheel drive" or "traction control". If you slam your foot on the brake hard, the car will apply ABS. We take this almost for granted. So why do we not take the same approach to our software? If I notice that one of my sensors is telling me something is wrong, I should take action, by blocking traffic, or alerting support teams. Having sensors and safety equipment is only useful if I monitor them and have actions plans to deal with them, when and if, they go off. ![Car Brains](/assets/images/securityblogs/brains.png)
 
 ___
 
@@ -74,7 +76,7 @@ The best plans of course are automated, _"If I see this then do that automatical
 
 ## Design
 
-How do you know your software engineers understand security and are applying proper techniques? You don't! So train them, take it seriously, and give them a [framework](https://oktapath.com/sdlc.html) where you can prove that the software they are producing is secure. This is the SDLC lifecycle and how security is important in it. In our car analogy, image you are a car designer for a big automobile company, and you want to use a new airbag in your automobile. Firstly you would look for proof that the airbag actually works. They would check that it fits in the dash board or steeling wheel. Then you would install one and test it again. Then you would create crash tests to see how it behaves in a real world scenario. When you are happy, you would amend your production line, and train your staff on how to install the new air bag. You would then validate that everything it rolling off the assemble line correctly, by applying rigorous QA to the new component. Your assembly line  once instructed on how to install the new airbag, cannot deviate, because the line doesn't allow it! There are checks and balances in the process to keep everyone working the same way.  ![Car Design](/assets/images/securityblogs/cardesign.webp) 
+How do you know your software engineers understand security and are applying proper techniques? You don't! So train them, take it seriously, and give them a [framework](https://oktapath.com/sdlc.html) where you can prove that the software they are producing is secure. This is the SDLC lifecycle and how security is important in it. In our car analogy, image you are a car designer for a big automobile company, and you want to use a new airbag in your automobile. Firstly you would look for proof that the airbag actually works. They would check that it fits in the dash board or steeling wheel. Then you would install one and test it again. Then you would create crash tests to see how it behaves in a real world scenario. When you are happy, you would amend your production line, and train your staff on how to install the new air bag. You would then validate that everything it rolling off the assembly line correctly, by applying rigorous QA to the new component. Your assembly line  once instructed on how to install the new airbag, cannot deviate, because the line doesn't allow it! There are checks and balances in the process to keep everyone working the same way.  ![Car Design](/assets/images/securityblogs/cardesign.webp)
 
 ## Assembly Line
 
@@ -93,11 +95,11 @@ When fixed we restart the whole process from the beginning. If on this deploymen
 
 ___
 
-Do your software engineers take the same precautions when introducing a new service or software package? They probably don't, or don't even know that they should follow a process, so make one that they cant circumvent. In a proper delivery lifecycle, you can spot these problems before they ever get to the assembly line.
+Do your software engineers take the same precautions when introducing a new service or software package? They probably don't, or don't even know that they should follow a process, so make one that they can't circumvent. In a proper delivery lifecycle, you can spot these problems before they ever get to the assembly line.
 
 ## Crash Testing
 
-To drive a vehicle today in most countries you have to have insurance, and a driving license, and you car needs to pass a MOT or NCT. These usually prove that the vehicle is in good working order (through an NCT test or similar) and that I have shown competency in driving and am covered in case I have an accident. We usually don't have an equivalent approach in our technology departments. We don't know how well our teams understand security. We have to take their word for it. ![Crash Testing](/assets/images/securityblogs/ncap.jpg)
+To drive a vehicle today in most countries you have to have insurance, and a driving license, and your car needs to pass a MOT or NCT. These usually prove that the vehicle is in good working order (through an NCT test or similar) and that I have shown competency in driving and am covered in case I have an accident. We usually don't have an equivalent approach in our technology departments. We don't know how well our teams understand security. We have to take their word for it. ![Crash Testing](/assets/images/securityblogs/ncap.jpg)
 
 ___
 
@@ -113,7 +115,7 @@ ___
 
 So when the new junior developer sits at his desk on his first day, he knows to take security seriously and that he he is one of the pieces that holds the whole security picture together. He doesn't want to be the weak link, and so when or if he is not sure, instead of committing his lines of code, he may ask a peer, "does this look OK to you"!
 
-> So the last principle of security is: it needs to be a culture. Its one of the first questions anyone in your organization askes when deciding on future or current work. If security is a culture, it becomes easy to manage, and security best practices more likely to be followed.
+> So the last principle of security is: it needs to be a culture. Its one of the first questions anyone in your organization asks when deciding on future or current work. If security is a culture, it becomes easy to manage, and security best practices more likely to be followed.
 
 ## Conclusion
 
